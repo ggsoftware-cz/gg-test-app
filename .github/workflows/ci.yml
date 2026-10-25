@@ -161,7 +161,7 @@ jobs:
           ./gitleaks git "${GITHUB_WORKSPACE}" --redact -v
       - name: Lint GitHub Actions workflows (actionlint + zizmor)
         run: |
-          bash <(curl -sSfL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash) /usr/local/bin
+          bash <(curl -sSfL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash latest /usr/local/bin
           pipx install zizmor
           actionlint
           zizmor .
