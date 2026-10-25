@@ -1,0 +1,4 @@
+# Default owner for everything. Replace the username with the team that owns
+# this client's project (e.g. @ggsoftware-cz/dev-team) and add per-area
+# overrides below as the repo grows.
+* @MartinHoly00

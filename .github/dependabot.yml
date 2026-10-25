@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+    # Actions are pinned by commit SHA; Dependabot updates these PRs against
+    # the version comments.
+    groups:
+      actions:
+        update-types:
+          - minor
+          - patch
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 14
+    # Node majors are chosen deliberately (LTS only, in sync with .nvmrc) —
+    # Dependabot would otherwise propose non-LTS odd-numbered majors.
+    ignore:
+      - dependency-name: node
+        update-types:
+          - version-update:semver-major

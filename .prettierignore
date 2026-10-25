@@ -1,0 +1,15 @@
+# Lockfiles / generated / build output
+pnpm-lock.yaml
+.next
+node_modules
+app/generated
+.vercel
+coverage
+test-results
+playwright-report
+
+# GitHub Actions YAML: kept out of Prettier to avoid YAML 1.1 quirks (`on:`)
+.github
+
+# Personal notes
+HELP.md

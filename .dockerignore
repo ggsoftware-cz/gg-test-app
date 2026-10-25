@@ -1,0 +1,44 @@
+# Packages
+node_modules
+**/node_modules
+
+# Build output
+.next
+out
+build
+
+# Prisma client
+app/generated
+
+# Version control
+.git
+.gitignore
+.vscode
+.idea
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Docker
+Dockerfile
+.dockerignore
+compose.yaml
+
+# CI / repo tooling not needed in the image
+.github
+docs
+scripts
+lefthook.yml
+tests
+playwright-report
+test-results
+coverage
+
+# Logs
+*-debug.log*
+npm-debug.log*
+
+# Other
+*.md
